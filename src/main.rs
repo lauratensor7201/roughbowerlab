@@ -1,6 +1,6 @@
 use std::env;
 use std::time::Instant;
-const APP_NAME: &str = "fs-watcher-88684a";
+const APP_NAME: &str = "fs-watcher-65b4a9";
 const VERSION: &str = "0.0.0";
 struct Handler { name: String, version: String }
 impl Handler {

